@@ -1,0 +1,165 @@
+<!Doctype HTML>
+<HTML>
+<Head><meta charset="utf-8"> <title>Travel Our World</title>
+<Style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap');
+body {margin: 0px 0px; background: white; font-family: 'Noto Sans KR', sans-serif;}
+header {background: white;}
+#logo {text-align: center; padding: 3% 5%; }
+aside {display:inline-block; font-size: 100%; position: fixed; bottom: 10%; right: 10%; box-shadow: 8px 8px 20px gray;}
+#menubar {margin: 0px 0px; width: 100%; display:inline-block; background: #f8e43e; text-align: center}
+#menubar ul li {display:inline-block; list-style-type:none; padding: 0% 4%; font-size: 0%;}
+#menubar ul li:hover {font-size: 100%;  padding: 0% 4%;}
+#menubar ul li a {color: white; text-decoration: none;}
+
+#introduce {text-align: center;}
+#intro {height: 250px; padding: 150px 200px 300px 200px; background-color: #f4f5f6;}
+/*
+#intro h1 {font-size: 40px; font-weight: 700;}
+#intro h3 {font-size: 25px; font-weight: 400;}
+*/
+
+#login button {border: 0px; background-color: #f8e43e; width:350px; height: 50px; font-family: 'Noto Sans KR', sans-serif; font-size: 20px; color: white; transition: box-shadow 0.2s;}
+#login button:hover {box-shadow: 0px 2px 5px gray; cursor: pointer;}
+#login input {width:350px; height: 40px; font-size: 20px;}
+
+#sidemenu h3 {text-align: center}
+#sidemenu {background: ghostwhite; padding: 1% 1%;}
+#sidemenu ul {margin: 0; padding: 0;}
+#sidemenu ul li {list-style-type:none; padding: 0px 15px;}
+#sidemenu ul li a {color: black; text-decoration: none;}
+#sidemenu ul li a:hover {font-weight: bold; text-shadow: 0px 0px 0px black;}
+
+#popup {animation: fadein 0.15s; transition: transform 0.15s; font-size: 100%; text-align: center; margin: 3% 5%; padding: 2%; background-color: rgba(255, 255, 255, 0.877); display: block; position: fixed; top: 5%; bottom: 5%; right: 5%; left: 5%; border-radius: 20px; box-shadow: 0px 0px 10px gray;}
+#b_false_popup {height: 0%; width: 0%; font-size:0%; text-align: center; margin: 0% 0%; padding: 0%; background-color: rgba(255, 255, 255, 0); display: block; position: fixed; top: 0px; bottom: 0px; right: 0px; left: 0px; border-radius: 0px; box-shadow: 0px 0px 0px gray;}
+#b_false_popup iframe {width: 0px; height: 0px;}
+
+#popup:hover {transition-property: background-color; background-color: rgb(255, 255, 255);}
+#popup #closebtn {font-size: 35px; font-weight: bold; color: gray; text-decoration: none; text-shadow: 0px 0px 0px black; transition: transform 0.1s;}
+#popup #closebtn:hover {transition-property: text-shadow; text-shadow: 0px 3px 7px gray;}
+
+footer {background-color: #292e3b; color: white; text-align: center; padding: 5% 4%;}
+
+#true_clock {display:inline-block; position: fixed; bottom: 10%; left: 5%; animation: fadein 0.2s; text-align:center; text-shadow: 0px 2px 7px rgb(58, 58, 58); font-size: 25px; font-weight: bold; color: rgb(250, 250, 250);}
+#clock {display:inline-block; position: fixed; bottom: 10%; left: 10%; text-shadow: 0px 0px 0px gray; font-size: 0px; color: rgba(255, 255, 255, 0);}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+</Style>
+</Head>
+<Body>
+<Script type="text/javascript">
+// MS IE 접속차단
+window.onload = function()
+{
+var browse = navigator.userAgent.toLowerCase(); 
+if( (navigator.appName == 'Netscape' && browse.indexOf('trident') != -1) || (browse.indexOf("msie") != -1))
+ {
+ alert("죄송합니다. 우리 웹사이트는 MS IE에서 서비스를 제공하지 않습니다. 다른 웹 브라우저로 접속하시길 바랍니다.");
+ window.location.href = "error.html";
+ }
+};
+</Script>
+
+<h1 id="clock"></h1>
+<a id="clock" href="javascript:document.getElementById('true_clock').setAttribute('id', 'clock')">두번 눌러 닫기</a>
+
+<header id="header">
+<div id="logo"><img src="logopng.png" width="35%" height="50%"></div>
+</header>
+
+<nav id="menubar">
+<ul>
+<li><a href="index.html"><img src="home.png" width="27px" height="27px"><br>홈</a></li>
+<li>&nbsp;</li>
+<li>&nbsp;</li>
+<li><a href="nara_symbol.html"><img src="flag.png" width="27px" height="27px"><br>상징과 국가</a></li>
+<li><a href="nara_theme.html"><img src="airplane.png" width="27px" height="27px"><br>테마 및 여행</a></li>
+<li><a href="travel_helper.html"><img src="double.png" width="27px" height="27px"><br>여행 도우미</a></li>
+<li>&nbsp;</li>
+<li>&nbsp;</li>
+<li><a href="sitemap.html"><img src="sitemap.png" width="27px" height="27px"><br>사이트맵</a></li>
+</ul>
+</nav>
+
+<section>
+<article id="introduce">
+
+<div id="intro">
+
+<span style="font-size: 35px; font-weight: 700;">로그인</span><br><br>
+
+<form id="login" name="fo" method="get">
+<input type="text" placeholder="아이디"><br><br>
+<input type="password" placeholder="패스워드"><br><br>
+<button type="submit">로그인</button><br><br>
+<button style="background-color: #3e70f8;" type="button" onClick="location.href='signup.html'">회원가입</button><br><br>
+</form>
+
+</div>
+
+</article>
+<article>
+<div id="b_false_popup">
+<a id="closebtn" href="javascript:document.getElementById('popup').setAttribute('id', 'b_false_popup')">X</a>
+<h1>상담</h1> 
+<p>
+<iframe frameborder="0" name="chat" width="60%" height="350px" src=""></iframe>
+<br><a href="https://tawk.to/chat/5cefd050267b2e5785302999/default" target="chat">채팅시작</a>
+</p>
+</div>
+</article>
+</section>
+
+<aside id="sidemenu">
+<h3>리모콘</h3>
+<ul>
+<li><a href="login.html">로그인</a></li>
+<li><a href="javascript:document.getElementById('b_false_popup').setAttribute('id', 'popup')">상담</a></li>
+<li><a href="javascript:document.getElementById('clock').setAttribute('id', 'true_clock')">시계</a></li>
+<li><a href="sitemap.html#recommend">추천 사이트</a></li>
+<li><a href="#header">맨위로</a></li>
+<li><a href="#outro">맨아래로</a></li>
+<li><a href="javascript:document.getElementById('sidemenu').setAttribute('style', 'display:inline-block; position: absolute; bottom: 0%; right: 0%; height: 0px; width: 0px; font-size: 0%; box-shadow: 0px 0px 0px gray; background: rgba( 255, 255, 255, 0);')">닫기</a></li>
+</ul>
+</aside>
+
+<footer id="outro">
+대한민국 대전광역시 동구 자양동 우송대학교<br>
+IT융합학부 스마트IT보안전공 201910738 이용위<br>
+<br>
+Copyright(c) 2019 Travel Our World All Rights Reserve<br>
+</footer>
+
+<Script>
+// 시계
+var clockTarget = document.getElementById("clock");
+function clock()
+{
+    var date = new Date();
+    var month = date.getMonth();
+    var clockDate = date.getDate(); 
+    var day = date.getDay();
+    var week = ['일', '월', '화', '수', '목', '금', '토'];
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    clockTarget .innerText = `${month+1}월 ${clockDate}일 ${week[day]}요일` +  ` ${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes }`  : minutes }:${seconds < 10 ? `0${seconds }`  : seconds }`;
+}
+
+function init()
+{
+clock();
+setInterval(clock, 1000);
+}
+
+init();
+</Script>
+</Body>
+</HTML>

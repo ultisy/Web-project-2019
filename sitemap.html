@@ -1,0 +1,290 @@
+<!Doctype HTML>
+<HTML>
+<Head><meta charset="utf-8"> <title>Travel Our World</title>
+<Style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap');
+body {margin: 0px 0px; background: white; font-family: 'Noto Sans KR', sans-serif;}
+header {background: white;}
+#logo {text-align: center; padding: 3% 5%; }
+aside {display:inline-block; font-size: 100%; position: fixed; bottom: 10%; right: 10%; box-shadow: 8px 8px 20px gray;}
+#menubar {margin: 0px 0px; width: 100%; display:inline-block; background: #f8e43e; text-align: center}
+#menubar ul li {display:inline-block; list-style-type:none; padding: 0% 4%; font-size: 0%;}
+#menubar ul li:hover {font-size: 100%;  padding: 0% 4%;}
+#menubar ul li a {color: white; text-decoration: none;}
+
+#naeyong {height: 1000px; padding: 4% 15% 25% 15%; background-color: white; text-align: left; }
+#moklok {display:flex; align-items:flex-start;}
+#moklok table {display:inline-block; text-align: center;}
+#moklok table th {background-color: ghostwhite; text-align: center; padding: 10px; width: 200px; height: 30px; border-top: 1px solid #c0c0c0;}
+#moklok table th a {color: black; text-decoration: none;}
+#moklok table th a:hover {color: black; text-decoration: underline;}
+#moklok table td {background-color: white; text-align: left; padding: 15px; width: 200px; height: 20px; border-top: 1px solid #c0c0c0; border-bottom: 1px solid #c0c0c0;}
+#moklok table td a {color: black; text-decoration: none;}
+#moklok table td a:hover {color: black; text-decoration: underline;}
+
+#recommend table {border-spacing:5px; padding: 0% 0%; }
+#recommend td {width: 500px;  margin: 0px 0px;}
+#recommend td img {width:500px; height: 250px; box-shadow: 0px 0px 0px gray; transition: transform 0.3s;}
+#recommend td img:hover {box-shadow: 0px 5px 8px gray; transform: scale(1.1,1.1);}
+
+#login button {border: 0px; background-color: #f8e43e; width:350px; height: 50px; font-family: 'Noto Sans KR', sans-serif; font-size: 20px; color: white; transition: box-shadow 0.2s;}
+#login button:hover {box-shadow: 0px 2px 5px gray; cursor: pointer;}
+#login input {width:350px; height: 40px; font-size: 20px;}
+
+#sidemenu h3 {text-align: center}
+#sidemenu {background: ghostwhite; padding: 1% 1%;}
+#sidemenu ul {margin: 0; padding: 0;}
+#sidemenu ul li {list-style-type:none; padding: 0px 15px;}
+#sidemenu ul li a {color: black; text-decoration: none;}
+#sidemenu ul li a:hover {font-weight: bold; text-shadow: 0px 0px 0px black;}
+
+#popup {animation: fadein 0.15s; transition: transform 0.15s; font-size: 100%; text-align: center; margin: 3% 5%; padding: 2%; background-color: rgba(255, 255, 255, 0.877); display: block; position: fixed; top: 5%; bottom: 5%; right: 5%; left: 5%; border-radius: 20px; box-shadow: 0px 0px 10px gray;}
+#b_false_popup {height: 0%; width: 0%; font-size:0%; text-align: center; margin: 0% 0%; padding: 0%; background-color: rgba(255, 255, 255, 0); display: block; position: fixed; top: 0px; bottom: 0px; right: 0px; left: 0px; border-radius: 0px; box-shadow: 0px 0px 0px gray;}
+#b_false_popup iframe {width: 0px; height: 0px;}
+#c_false_popup {height: 0%; width: 0%; font-size:0%; text-align: center; margin: 0% 0%; padding: 0%; background-color: rgba(255, 255, 255, 0); display: block; position: fixed; top: 0px; bottom: 0px; right: 0px; left: 0px; border-radius: 0px; box-shadow: 0px 0px 0px gray;}
+#d_false_popup {height: 0%; width: 0%; font-size:0%; text-align: center; margin: 0% 0%; padding: 0%; background-color: rgba(255, 255, 255, 0); display: block; position: fixed; top: 0px; bottom: 0px; right: 0px; left: 0px; border-radius: 0px; box-shadow: 0px 0px 0px gray;}
+#e_false_popup {height: 0%; width: 0%; font-size:0%; text-align: center; margin: 0% 0%; padding: 0%; background-color: rgba(255, 255, 255, 0); display: block; position: fixed; top: 0px; bottom: 0px; right: 0px; left: 0px; border-radius: 0px; box-shadow: 0px 0px 0px gray;}
+
+
+#popup:hover {transition-property: background-color; background-color: rgb(255, 255, 255);}
+#popup #closebtn {font-size: 35px; font-weight: bold; color: gray; text-decoration: none; text-shadow: 0px 0px 0px black; transition: transform 0.1s;}
+#popup #closebtn:hover {transition-property: text-shadow; text-shadow: 0px 3px 7px gray;}
+
+footer {background-color: #292e3b; color: white; text-align: center; padding: 5% 4%;}
+
+#true_clock {display:inline-block; position: fixed; bottom: 10%; left: 5%; animation: fadein 0.2s; text-align:center; text-shadow: 0px 2px 7px rgb(58, 58, 58); font-size: 25px; font-weight: bold; color: rgb(250, 250, 250);}
+#clock {display:inline-block; position: fixed; bottom: 10%; left: 10%; text-shadow: 0px 0px 0px gray; font-size: 0px; color: rgba(255, 255, 255, 0);}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+</Style>
+</Head>
+<Body>
+<Script type="text/javascript">
+// MS IE 접속차단
+window.onload = function()
+{
+var browse = navigator.userAgent.toLowerCase(); 
+if( (navigator.appName == 'Netscape' && browse.indexOf('trident') != -1) || (browse.indexOf("msie") != -1))
+ {
+ alert("죄송합니다. 우리 웹사이트는 MS IE에서 서비스를 제공하지 않습니다. 다른 웹 브라우저로 접속하시길 바랍니다.");
+ window.location.href = "error.html";
+ }
+};
+</Script>
+
+<h1 id="clock"></h1>
+<a id="clock" href="javascript:document.getElementById('true_clock').setAttribute('id', 'clock')">두번 눌러 닫기</a>
+
+<header id="header">
+<div id="logo"><img src="logopng.png" width="35%" height="50%"></div>
+</header>
+
+<nav id="menubar">
+<ul>
+<li><a href="index.html"><img src="home.png" width="27px" height="27px"><br>홈</a></li>
+<li>&nbsp;</li>
+<li>&nbsp;</li>
+<li><a href="nara_symbol.html"><img src="flag.png" width="27px" height="27px"><br>상징과 국가</a></li>
+<li><a href="nara_theme.html"><img src="airplane.png" width="27px" height="27px"><br>테마 및 여행</a></li>
+<li><a href="travel_helper.html"><img src="double.png" width="27px" height="27px"><br>여행 도우미</a></li>
+<li>&nbsp;</li>
+<li>&nbsp;</li>
+<li><a href="sitemap.html"><img src="sitemap.png" width="27px" height="27px"><br>사이트맵</a></li>
+</ul>
+</nav>
+
+<section>
+<article id="naeyong">
+<div style="text-align: left;">
+<div style="font-weight: 700; font-size: 45px; color: black;">사이트맵</div>
+<div style="font-weight: 400; font-size: 20px; color: gray;"></div><br>
+</div>
+<div id="moklok">
+<br>
+<table>
+<tr> <th><a href="nara_symbol.html">상징과 국가</a></th> </tr>
+<tr><td><ul>
+<li><a href="nara_symbol.html#korea">대한민국</a></li>
+<li><a href="nara_symbol.html#taiwan">대만</a></li>
+<li><a href="nara_symbol.html#germany">독일</a></li>
+<li><a href="nara_symbol.html#russia">러시아</a></li>
+<li><a href="nara_symbol.html#usa">미국</a></li>
+<li><a href="nara_symbol.html#malaysia">말레이시아</a></li>
+<li><a href="nara_symbol.html#vietnam">베트남</a></li>
+<li><a href="nara_symbol.html#singapore">싱가포르</a></li>
+<li><a href="nara_symbol.html#spain">스페인</a></li>
+<li><a href="nara_symbol.html#uk">영국</a></li>
+<li><a href="nara_symbol.html#japan">일본</a></li>
+<li><a href="nara_symbol.html#italy">이탈리아</a></li>
+<li><a href="nara_symbol.html#china">중국</a></li>
+<li><a href="nara_symbol.html#canada">캐나다</a></li>
+<li><a href="nara_symbol.html#tai">태국</a></li>
+<li><a href="nara_symbol.html#france">프랑스</a></li>
+<li><a href="nara_symbol.html#philippines">필리핀</a></li>
+</ul></td></tr>
+</table>
+
+<table>
+<tr> <th><a href="nara_theme.html">테마 및 여행</a></th> </tr>
+<tr><td><ul>
+<li><a href="#">음식 테마</a></li>
+<li><a href="#">문화와 역사 테마</a></li>
+<li><a href="#">엑티비티 테마</a></li>
+<li><a href="#">체험과 취미 테마</a></li>
+<li><a href="#">나라 탑10</a></li>
+<li><a href="#">관광지 탑10</a></li>
+</ul></td></tr>
+</table>
+
+<table>
+<tr> <th><a href="nara_culture.html">문화와 관광지</a></th> </tr>
+<tr><td><ul>
+<li><a href="nara_culture.html#korea">대한민국</a></li>
+<li><a href="nara_culture.html#taiwan">대만</a></li>
+<li><a href="nara_culture.html#germany">독일</a></li>
+<li><a href="nara_culture.html#russia">러시아</a></li>
+<li><a href="nara_culture.html#usa">미국</a></li>
+<li><a href="nara_culture.html#malaysia">말레이시아</a></li>
+<li><a href="nara_culture.html#vietnam">베트남</a></li>
+<li><a href="nara_culture.html#singapore">싱가포르</a></li>
+<li><a href="nara_culture.html#spain">스페인</a></li>
+<li><a href="nara_culture.html#uk">영국</a></li>
+<li><a href="nara_culture.html#japan">일본</a></li>
+<li><a href="nara_culture.html#italy">이탈리아</a></li>
+<li><a href="nara_culture.html#china">중국</a></li>
+<li><a href="nara_culture.html#canada">캐나다</a></li>
+<li><a href="nara_culture.html#tai">태국</a></li>
+<li><a href="nara_culture.html#france">프랑스</a></li>
+<li><a href="nara_culture.html#philippines">필리핀</a></li>
+</ul></td></tr>
+</table>
+
+<table>
+<tr> <th><a href="travel_helper.html">여행 도우미</a></th> </tr>
+<tr><td><ul>
+<li><a href="#">여행 코스별 계산</a></li>
+<li><a href="#">비용 지출별 계산</a></li>
+</ul></td></tr>
+</table>
+
+
+<table>
+<tr> <th><a href="index.html">메인 페이지</a></th> </tr>
+<tr><td><ul>
+<li><a href="index.html#introduce">사이트 소개와 안내</a></li>
+<li><a href="login.html">로그인</a></li>
+<li><a href="signup.html">회원가입</a></li>
+</ul></td></tr>
+</table>
+</div>
+<br><br>
+<div id="recommend" style="text-align: left;">
+<div style="font-weight: 700; font-size: 45px; color: black;">추천 사이트</div>
+<div style="font-weight: 400; font-size: 20px; color: gray;">우리 웹사이트에서 추천하는 다른 웹사이트를 만나보세요!</div><br>
+<div>
+<table style="display:inline-block;">
+<tr> <td colspan="2"><a href="http://it.wsu.ac.kr"><img src="rcmnd1.jpg"></a></td> <td colspan="2"><a href="javascript:document.getElementById('c_false_popup').setAttribute('id', 'popup')"><img src="rcmnd2.jpg"></a></td> </tr>
+<tr> <td colspan="2"><a href="javascript:document.getElementById('d_false_popup').setAttribute('id', 'popup')"><img src="rcmnd3.jpg"></a></td> <td colspan="2"><a href="javascript:document.getElementById('e_false_popup').setAttribute('id', 'popup')"></a></td> </tr>
+</table>
+</div>
+</div>
+</article>
+
+<article>
+<div id="c_false_popup">
+<a id="closebtn" href="javascript:document.getElementById('popup').setAttribute('id', 'c_false_popup')">X</a>
+<h1>현태의 할일없을때 들어가는 사이트</h1>
+<div>
+<h1>제작: 김현태</h1>
+<br>
+<br><br> 할일이 없을 때 이 사이트에 접속하면 다양하고 흥미로운 주제와
+<br><br> 그 주제에 대한 놀랄만큼 당신을 만족시켜줄 정보들이 당신을 기다리고 있습니다.
+<br><br> 더 나아가, 다른 홈페이지까지 연결하여 주는, 당신의 무료함을 날려줄 사이트로서 제격입니다.
+</div>
+</div>
+
+<div id="d_false_popup">
+<a id="closebtn" href="javascript:document.getElementById('popup').setAttribute('id', 'd_false_popup')">X</a>
+<h1>유천횟집</h1>
+<div>
+<h1>제작: 권순호</h1>
+<br>
+<br><br> 대한민국 넘버원! 30년 역사의 장인정신, 우리 웹사이트에서 강력히 추천하는 곳이자 사이트입니다.
+<br><br> 횟집에 대하여 소개를 하는 데에 지나치지 않고, 노래가 흘러나오며 즐거운 기분을 느낄 수 있으실 겁니다.
+<br><br> 더 나아가, 예약기능과 메뉴판 기능이 있습니다. 말이 더 이상 필요없는 끝내주는 사이트라고 할 수 있습니다.
+</div>
+
+<div id="e_false_popup">
+<a id="closebtn" href="javascript:document.getElementById('popup').setAttribute('id', 'c_false_popup')">X</a>
+<h1>메모</h1> 
+<p>
+</p>
+</div>
+
+</article>
+
+<article>
+<div id="b_false_popup">
+<a id="closebtn" href="javascript:document.getElementById('popup').setAttribute('id', 'b_false_popup')">X</a>
+<h1>상담</h1> 
+<p>
+<iframe frameborder="0" name="chat" width="60%" height="350px" src=""></iframe>
+<br><a href="https://tawk.to/chat/5cefd050267b2e5785302999/default" target="chat">채팅시작</a>
+</p>
+</div>
+</article>
+</section>
+
+<aside id="sidemenu">
+<h3>리모콘</h3>
+<ul>
+<li><a href="login.html">로그인</a></li>
+<li><a href="javascript:document.getElementById('b_false_popup').setAttribute('id', 'popup')">상담</a></li>
+<li><a href="javascript:document.getElementById('clock').setAttribute('id', 'true_clock')">시계</a></li>
+<li><a href="sitemap.html#recommend">추천 사이트</a></li>
+<li><a href="#header">맨위로</a></li>
+<li><a href="#outro">맨아래로</a></li>
+<li><a href="javascript:document.getElementById('sidemenu').setAttribute('style', 'display:inline-block; position: absolute; bottom: 0%; right: 0%; height: 0px; width: 0px; font-size: 0%; box-shadow: 0px 0px 0px gray; background: rgba( 255, 255, 255, 0);')">닫기</a></li>
+</ul>
+</aside>
+
+<footer id="outro">
+대한민국 대전광역시 동구 자양동 우송대학교<br>
+IT융합학부 스마트IT보안전공 201910738 이용위<br>
+<br>
+Copyright(c) 2019 Travel Our World All Rights Reserve<br>
+</footer>
+
+<Script>
+// 시계
+var clockTarget = document.getElementById("clock");
+function clock()
+{
+    var date = new Date();
+    var month = date.getMonth();
+    var clockDate = date.getDate(); 
+    var day = date.getDay();
+    var week = ['일', '월', '화', '수', '목', '금', '토'];
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    clockTarget .innerText = `${month+1}월 ${clockDate}일 ${week[day]}요일` +  ` ${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes }`  : minutes }:${seconds < 10 ? `0${seconds }`  : seconds }`;
+}
+
+function init()
+{
+clock();
+setInterval(clock, 1000);
+}
+
+init();
+</Script>
+</Body>
+</HTML>

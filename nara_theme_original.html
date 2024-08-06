@@ -1,0 +1,407 @@
+<!Doctype HTML>
+<HTML>
+<Head><meta charset="utf-8"> <title>Travel Our World</title>
+<Style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap');
+body {margin: 0px 0px; background: white; font-family: 'Noto Sans KR', sans-serif;}
+header {background: white;}
+#logo {text-align: center; padding: 3% 5%; }
+aside {display:inline-block; font-size: 100%; position: fixed; bottom: 10%; right: 10%; box-shadow: 8px 8px 20px gray;}
+#menubar {margin: 0px 0px; width: 100%; display:inline-block; background: #f8e43e; text-align: center}
+#menubar ul li {display:inline-block; list-style-type:none; padding: 0% 4%; font-size: 0%;}
+#menubar ul li:hover {font-size: 100%;  padding: 0% 4%;}
+#menubar ul li a {color: white; text-decoration: none;}
+
+#container {width: 100%; margin:0 auto; text-align:left; background: rgb(96, 193, 223); box-shadow: 8px 8px 20px gray;}
+.tab {list-style: none; margin: 0; padding: 0; overflow: hidden;}
+.tab li {float: left;} /* Float the list items side by side */
+.tab li a {display: inline-block; color: white; text-align: center; text-decoration: none; font-weight: 700; padding: 14px 16px; font-size: 17px; transition:0.3s;} /* Style the links inside the list items */
+.tabcontent {display: none; background-color: white; padding: 20px 40px; color:black;} /* Style the tab content */
+ul.tab li.current{background-color: rgb(62, 151, 202); color: #222;}
+ul.tab li.current:hover {background-color: rgb(62, 151, 202); color: #222;}
+ul.tab li:hover {background-color: rgb(97, 201, 233); color: #222;}
+.tabcontent.current {display: block;}
+
+#anne_naeyong {padding: 7% 13%;}
+#saekin {height: 700px; padding: 4% 15% 4% 15%; background-image: url(background3.jpg); background-position: center; background-repeat: no-repeat; background-size:cover; text-align: center;}
+#saekin #sptable {display:inline-block; text-align: center;  border: 1px solid #c0c0c0; border-collapse: collapse; box-shadow: 0px 0px 0px gray;}
+#saekin #sptable th {background-color: ghostwhite; text-align: center; padding: 10px; width: 200px; height: 30px; border-right: 1px solid #c0c0c0;}
+#saekin #sptable td {background-color: white; text-align: left; padding: 15px; width: 200px; height: 20px; border-right: 1px solid #c0c0c0;}
+#saekin #sptable td a {color: black; text-decoration: none;}
+#saekin #sptable td a:hover {color: #ffb222; text-decoration: underline;}
+#saekin #sptable td img {float:left; padding-right:10px; width: 30px; height: 20px;}
+#saekin #sptable td:hover {background-color: #fff38a;}
+
+#saekin #foodtable {border-spacing:0px; padding: 0% 0%; }
+#saekin #foodtable td {width: 225px;  margin: 0px 0px;}
+#saekin #foodtable td img {max-width:100%; height: auto;}
+
+.imgbox{width: 225px; height: 225px; position: relative; cursor: pointer; overflow: hidden;}
+.imgdiv{width: 100%; height: 100%; position: absolute; background: ghostwhite; z-index:1; -webkit-transition:all .7s ease; transition: all .4s ease; bottom:0px; overflow: hidden;}
+.imgdiv img{width: 100%; height: 100%;}
+.imgbox:hover .imgdiv{bottom: 120px;}
+.imgdescdiv{text-align: left; width: 100%; height: 110px; padding:10px; color: black; background: ghostwhite; position: absolute; bottom:0px;}
+
+#sidemenu h3 {text-align: center}
+#sidemenu {background: ghostwhite; padding: 1% 1%;}
+#sidemenu ul {margin: 0; padding: 0;}
+#sidemenu ul li {list-style-type:none; padding: 0px 15px;}
+#sidemenu ul li a {color: black; text-decoration: none;}
+#sidemenu ul li a:hover {font-weight: bold; text-shadow: 0px 0px 0px black;}
+
+#popup {animation: fadein 0.15s; transition: transform 0.15s; font-size: 100%; text-align: center; margin: 3% 5%; padding: 2%; background-color: rgba(255, 255, 255, 0.877); display: block; position: fixed; top: 5%; bottom: 5%; right: 5%; left: 5%; border-radius: 20px; box-shadow: 0px 0px 10px gray;}
+#b_false_popup {height: 0%; width: 0%; font-size:0%; text-align: center; margin: 0% 0%; padding: 0%; background-color: rgba(255, 255, 255, 0); display: block; position: fixed; top: 0px; bottom: 0px; right: 0px; left: 0px; border-radius: 0px; box-shadow: 0px 0px 0px gray;}
+#b_false_popup iframe {width: 0px; height: 0px;}
+
+#popup:hover {transition-property: background-color; background-color: rgb(255, 255, 255);}
+#popup #closebtn {font-size: 35px; font-weight: bold; color: gray; text-decoration: none; text-shadow: 0px 0px 0px black; transition: transform 0.1s;}
+#popup #closebtn:hover {transition-property: text-shadow; text-shadow: 0px 3px 7px gray;}
+
+footer {background-color: #292e3b; color: white; text-align: center; padding: 5% 4%;}
+
+#true_clock {display:inline-block; position: fixed; bottom: 10%; left: 5%; animation: fadein 0.2s; text-align:center; text-shadow: 0px 2px 7px rgb(58, 58, 58); font-size: 25px; font-weight: bold; color: rgb(250, 250, 250);}
+#clock {display:inline-block; position: fixed; bottom: 10%; left: 10%; text-shadow: 0px 0px 0px gray; font-size: 0px; color: rgba(255, 255, 255, 0);}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+</Style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</Head>
+<Body>
+<Script type="text/javascript">
+// MS IE 접속차단
+window.onload = function()
+{
+var browse = navigator.userAgent.toLowerCase(); 
+if( (navigator.appName == 'Netscape' && browse.indexOf('trident') != -1) || (browse.indexOf("msie") != -1))
+ {
+ alert("죄송합니다. 우리 웹사이트는 MS IE에서 서비스를 제공하지 않습니다. 다른 웹 브라우저로 접속하시길 바랍니다.");
+ window.location.href = "error.html";
+ }
+};
+</Script>
+
+<h1 id="clock"></h1>
+<a id="clock" href="javascript:document.getElementById('true_clock').setAttribute('id', 'clock')">두번 눌러 닫기</a>
+
+<header id="header">
+<div id="logo"><img src="logopng.png" width="35%" height="50%"></div>
+</header>
+
+<nav id="menubar">
+<ul>
+<li><a href="index.html"><img src="home.png" width="27px" height="27px"><br>홈</a></li>
+<li>&nbsp;</li>
+<li>&nbsp;</li>
+<li><a href="nara_symbol.html"><img src="flag.png" width="27px" height="27px"><br>상징과 국가</a></li>
+<li><a href="nara_theme.html"><img src="airplane.png" width="27px" height="27px"><br>테마 및 여행</a></li>
+<li><a href="travel_helper.html"><img src="double.png" width="27px" height="27px"><br>여행 도우미</a></li>
+<li>&nbsp;</li>
+<li>&nbsp;</li>
+<li><a href="sitemap.html"><img src="sitemap.png" width="27px" height="27px"><br>사이트맵</a></li>
+</ul>
+</nav>
+
+<section>
+<div id="theme_naeyong">
+<article id="saekin">
+<div style="text-align: left;">
+<div style="font-weight: 700; font-size: 45px; color: black;">테마 및 여행</div>
+<div style="font-weight: 400; font-size: 20px; color: gray;">여행을 계획중이신가요? 아래 계획 중인 여행도시를 클릭하시면 해당 정보페이지로 이동하여 많은 여행정보를 보실 수 있습니다.</div><br>
+</div>
+<br>
+
+<div id="container">
+<ul class="tab">
+<li><a><img src="empty.png" style="padding: 6px;" width="24px" height="24px"><br>&nbsp;&nbsp;</a></li>
+<li><a><img src="empty.png" style="padding: 6px;" width="24px" height="24px"><br>&nbsp;&nbsp;</a></li>
+<li class="current" data-tab="tab1"><a><img src="food.png" style="padding: 6px;" width="24px" height="24px"><br>음식</a></li>
+<li data-tab="tab2"><a><img src="culture.png" style="padding: 6px;" width="24px" height="24px"><br>문화와 역사</a></li>
+<li data-tab="tab3"><a><img src="sports.png" style="padding: 6px;" width="24px" height="24px"><br>엑티비티</a></li>
+<li data-tab="tab5"><a><img src="hobby.png" style="padding: 6px;" width="24px" height="24px"><br>체험과 취미</a></li>
+<li><a><img src="empty.png" style="padding: 6px;" width="24px" height="24px"><br>&nbsp;&nbsp;</a></li>
+<li><a><img src="empty.png" style="padding: 6px;" width="24px" height="24px"><br>&nbsp;&nbsp;</a></li>
+<li><a><img src="empty.png" style="padding: 6px;" width="24px" height="24px"><br>&nbsp;&nbsp;</a></li>
+<li data-tab="tab6"><a><img src="like.png" style="padding: 6px;" width="24px" height="24px"><br>나라 탑10</a></li>
+<li data-tab="tab7"><a><img src="like.png" style="padding: 6px;" width="24px" height="24px"><br>관광지 탑10</a></li>
+</ul>
+
+<div style="text-align: center;" id="tab1" class="tabcontent current">
+<span style="font-size: 25px; font-weight: 700;">음식</span><br>
+<span style="font-size: 15px; font-weight: 400;">여러분의 푸드 버킷리스트를 체워줄 다채로운 음식들을 만나보세요!</span><br>
+<p>
+<table id="foodtable" style="display:inline-block;">
+<tr> <td><a href="nara_theme.html"><div class="imgbox"> <div class="imgdiv"><img src="food1.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> <td><a href="nara_theme.html"><div class="imgbox"> <div class="imgdiv"><img src="food2.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> <td><a href="nara_symbol.html"><div class="imgbox"> <div class="imgdiv"><img src="food3.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> <td><a href="nara_culture.html"><div class="imgbox"> <div class="imgdiv"><img src="food4.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> </tr>
+<tr> <td><a href="nara_theme.html"><div class="imgbox"> <div class="imgdiv"><img src="food5.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> </tr>
+</table>
+</p>
+</div>
+
+<div style="text-align: center;" id="tab2" class="tabcontent">
+<span style="font-size: 25px; font-weight: 700;">문화와 역사</span><br>
+<span style="font-size: 15px; font-weight: 400;">역사와 문화를 직접 느껴보세요, 당신이 주인공입니다.</span><br>
+<p>
+<table id="foodtable" style="display:inline-block;">
+<tr> <td><a href="nara_theme.html"><div class="imgbox"> <div class="imgdiv"><img src="culture0.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> <td><a href="nara_theme.html"><div class="imgbox"> <div class="imgdiv"><img src="culture1.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> <td><a href="nara_symbol.html"><div class="imgbox"> <div class="imgdiv"><img src="culture2.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> <td><a href="nara_culture.html"><div class="imgbox"> <div class="imgdiv"><img src="culture3.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> </tr>
+</table>
+</p>
+</div>
+
+<div style="text-align: center;" id="tab3" class="tabcontent">
+<span style="font-size: 25px; font-weight: 700;">엑티비티</span><br>
+<span style="font-size: 15px; font-weight: 400;">각종 스포츠, 스쿠버 다이빙, 하이킹 등 가지각색의 활동을 즐겨보세요.</span><br>
+<p>
+<table id="foodtable" style="display:inline-block;">
+<tr> <td><a href="#"><div class="imgbox"> <div class="imgdiv"><img src="activity1.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> <td><a href="#"><div class="imgbox"> <div class="imgdiv"><img src="activity2.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> <td><a href="nara_symbol.html"><div class="imgbox"> <div class="imgdiv"><img src="activity3.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> <td><a href="#"><div class="imgbox"> <div class="imgdiv"><img src="activity4.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> </tr>
+<tr> <td><a href="#"><div class="imgbox"> <div class="imgdiv"><img src="activity5.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> </tr>
+</table>
+</p>
+</div>
+
+<div style="text-align: center;" id="tab4" class="tabcontent">
+<span style="font-size: 25px; font-weight: 700;">이벤트</span><br>
+<span style="font-size: 15px; font-weight: 400;">기념일을 더 값진 추억으로 남길 이벤트로 남겨보세요.</span><br>
+<p>
+<table id="foodtable" style="display:inline-block;">
+<tr> <td><a href="nara_theme.html"><div class="imgbox"> <div class="imgdiv"><img src="food1.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> <td><a href="#"><div class="imgbox"> <div class="imgdiv"><img src="food2.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> <td><a href="nara_symbol.html"><div class="imgbox"> <div class="imgdiv"><img src="food3.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> <td><a href="nara_culture.html"><div class="imgbox"> <div class="imgdiv"><img src="food4.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> </tr>
+<tr> <td><a href="nara_theme.html"><div class="imgbox"> <div class="imgdiv"><img src="food5.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> </tr>
+</table>
+</p>
+</div>
+
+<div style="text-align: center;" id="tab5" class="tabcontent">
+<span style="font-size: 25px; font-weight: 700;">체험과 취미</span><br>
+<span style="font-size: 15px; font-weight: 400;">오감으로 느끼고 즐기며 만끽해보세요, 곧 세상을 느낄 수 있을겁니다.</span><br>
+<p>
+<table id="foodtable" style="display:inline-block;">
+<tr> <td><a href="#"><div class="imgbox"> <div class="imgdiv"><img src="hobby1.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> <td><a href="#"><div class="imgbox"> <div class="imgdiv"><img src="hobby2.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> <td><a href="#"><div class="imgbox"> <div class="imgdiv"><img src="hobby3.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> <td><a href="#"><div class="imgbox"> <div class="imgdiv"><img src="hobby4.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> </tr>
+<tr> <td><a href="#"><div class="imgbox"> <div class="imgdiv"><img src="hobby5.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> </tr>
+</table>
+</p>
+</div>
+
+<div style="text-align: center;" id="tab6" class="tabcontent">
+<h1>테마별 국가 TOP 10</h1><br>
+<table id="sptable">
+ <thead>  <tr> <th>종합</th> <th>가족끼리</th> <th>커플끼리</th> <th>솔로(혼자서)</th> </tr>  </thead>
+ <tbody>  <tr> <td><span style="float:left; padding-right:5px; font-weight: 700;">1위</span> <a href="nara_culture.html#japan"><img src="flag_japan.png">일본</a></td> <td><a href="nara_culture.html#japan"><img src="flag_japan.png">일본</a></td> <td><a href="nara_culture.html#japan"><img src="flag_japan.png">일본</a></td> <td><a href="nara_culture.html#japan"><img src="flag_japan.png">일본</a></td> </tr>  
+          <tr> <td><span style="float:left; padding-right:5px; font-weight: 700;">2위</span> <a href="nara_culture.html#vietnam"><img src="flag_vietnam.png">베트남</a></td> <td><a href="nara_culture.html#usa"><img src="flag_guam.png">괌</a></td> <td><a href="nara_culture.html#vietnam"><img src="flag_vietnam.png">베트남</a></td> <td><a href="nara_culture.html#usa"><img src="flag_usa.png">미국</a></td> </tr>  
+          <tr> <td><span style="float:left; padding-right:5px; font-weight: 700;">3위</span> <a href="nara_culture.html#tai"><img src="flag_tai.png">태국</a></td> <td><a href="nara_culture.html#vietnam"><img src="flag_vietnam.png">베트남</a></td> <td><a href="nara_culture.html#tai"><img src="flag_tai.png">태국</a></td> <td><a href="nara_culture.html#taiwan"><img src="flag_taiwan.png">대만</a></td> </tr>
+          <tr> <td><span style="float:left; padding-right:5px; font-weight: 700;">4위</span> <a href="nara_culture.html#philippines"><img src="flag_philippines.png">필리핀</a></td> <td><a href="nara_culture.html#usa"><img src="flag_usa.png">미국</a></td> <td><a href="nara_culture.html#taiwan"><img src="flag_taiwan.png">대만</a></td> <td><a href="nara_culture.html#tai"><img src="flag_tai.png">태국</a></td> </tr>
+          <tr> <td><span style="float:left; padding-right:5px; font-weight: 700;">5위</span> <a href="nara_culture.html#usa"><img src="flag_guam.png">괌</a></td> <td><a href="nara_culture.html#philippines"><img src="flag_philippines.png">필리핀</a></td> <td><a href="nara_culture.html#usa"><img src="flag_usa.png">미국</a></td> <td><a href="nara_culture.html#vietnam"><img src="flag_vietnam.png">베트남</a></td> </tr>
+          <tr> <td><span style="float:left; padding-right:5px; font-weight: 700;">6위</span> <a href="nara_culture.html#hongkong"><img src="flag_hongkong.png">홍콩</a></td> <td><a href="nara_culture.html#tai"><img src="flag_tai.png">태국</a></td> <td><a href="nara_culture.html#hongkong"><img src="flag_hongkong.png">홍콩</a></td> <td><a href="nara_culture.html#spain"><img src="flag_spain.png">스페인</a></td> </tr>
+          <tr> <td><span style="float:left; padding-right:5px; font-weight: 700;">7위</span> <a href="nara_culture.html#korea"><img src="flag_taiwan.png">대만</a></td> <td><a href="nara_culture.html#malaysia"><img src="flag_malaysia.png">말레이시아</a></td> <td><a href="nara_culture.html#usa"><img src="flag_guam.png">괌</a></td> <td><a href="nara_culture.html#hongkong"><img src="flag_hongkong.png">홍콩</a></td> </tr>
+          <tr> <td><span style="float:left; padding-right:5px; font-weight: 700;">8위</span> <a href="nara_culture.html#usa"><img src="flag_usa.png">미국</a></td> <td><a href="nara_culture.html#taiwan"><img src="flag_taiwan.png">대만</a></td> <td><a href="nara_culture.html#italy"><img src="flag_italy.png">이탈리아</a></td> <td><a href="nara_culture.html#italy"><img src="flag_italy.png">이탈리아</a></td> </tr>
+          <tr> <td><span style="float:left; padding-right:5px; font-weight: 700;">9위</span> <a href="nara_culture.html#malaysia"><img src="flag_malaysia.png">말레이시아</a></td> <td><a href="nara_culture.html#hongkong"><img src="flag_hongkong.png">홍콩</a></td> <td><a href="nara_culture.html#spain"><img src="flag_spain.png">스페인</a></td> <td><a href="nara_culture.html#uk"><img src="flag_uk.png">영국</a></td> </tr>
+          <tr> <td><span style="font-size: 80%; float:left; padding-right:5px; font-weight: 700;">10위</span> <a href="nara_culture.html#singapore"><img src="flag_singapore.png">싱가포르</a></td> <td><a href="nara_culture.html#singapore"><img src="flag_singapore.png">싱가포르</a></td> <td><a href="nara_culture.html#malaysia"><img src="flag_malaysia.png">말레이시아</a></td> <td><a href="nara_culture.html#china"><img src="flag_china.png">중국</a></td> </tr>
+</tbody>
+</table>
+</div>
+
+<div style="text-align: center;" id="tab7" class="tabcontent">
+<h1>테마별 관광지 TOP 10</h1><br>
+<table id="sptable">
+ <thead>  <tr> <th>전세계 관광객 인기</th> <th>한국인 관광객에게 인기</th></tr>  </thead>
+ <tbody>  <tr> <td><span style="float:left; padding-right:5px; font-weight: 700;">1위</span> <a href="nara_culture.html#tai"><img src="flag_tai.png">태국 방콕</a></td> <td><a href="nara_culture.html#japan"><img src="flag_japan.png">일본 오사카</a></td> </tr>  
+          <tr> <td><span style="float:left; padding-right:5px; font-weight: 700;">2위</span> <a href="nara_culture.html#uk"><img src="flag_uk.png">영국 런던</a></td> <td><a href="nara_culture.html#japan"><img src="flag_japan.png">일본 후쿠오카</a></td> </tr>  
+          <tr> <td><span style="float:left; padding-right:5px; font-weight: 700;">3위</span> <a href="nara_culture.html#france"><img src="flag_france.png">프랑스 파리</a></td> <td><a href="nara_culture.html#japan"><img src="flag_japan.png">일본 도쿄</a></td> </tr>
+          <tr> <td><span style="float:left; padding-right:5px; font-weight: 700;">4위</span> <a href="nara_culture.html#arabemirates"><img src="flag_arabemirates.png">두바이</a></td> <td><a href="nara_culture.html#hongkong"><img src="flag_hongkong.png">홍콩 특별행정구</a></td> </tr>
+          <tr> <td><span style="float:left; padding-right:5px; font-weight: 700;">5위</span> <a href="nara_culture.html#singapore"><img src="flag_singapore.png">싱가포르</a></td> <td><a href="nara_culture.html#tai"><img src="flag_tai.png">태국 방콕</a></td> </tr>
+          <tr> <td><span style="float:left; padding-right:5px; font-weight: 700;">6위</span> <a href="nara_culture.html#usa"><img src="flag_usa.png">미국 뉴욕</a></td> <td><a href="nara_culture.html#vietnam"><img src="flag_vietnam.png">베트남 다낭</a></td> </tr>
+          <tr> <td><span style="float:left; padding-right:5px; font-weight: 700;">7위</span> <a href="nara_culture.html#malaysia"><img src="flag_malaysia.png">쿠알라품푸르</a></td> <td><a href="nara_culture.html#philippines"><img src="flag_philippines.png">필리핀 세부</a></td> </tr>
+          <tr> <td><span style="float:left; padding-right:5px; font-weight: 700;">8위</span> <a href="nara_culture.html#japan"><img src="flag_japan.png">일본 도쿄</a></td> <td><a href="nara_culture.html#taiwan"><img src="flag_taiwan.png">대만 타이페이</a></td> </tr>
+          <tr> <td><span style="float:left; padding-right:5px; font-weight: 700;">9위</span> <a href="nara_culture.html#turkey"><img src="flag_turkey.png">터키 이스탄불</a></td> <td><a href="nara_culture.html#guam"><img src="flag_guam.png">미국령 괌</a></td> </tr>
+          <tr> <td><span style="font-size: 80%; float:left; padding-right:5px; font-weight: 700;">10위</span> <a href="nara_culture.html#korea"><img src="flag_korea.png">대한민국 서울</a></td> <td><a href="nara_culture.html#makao"><img src="flag_makao.png">마카오 특별행정구</a></td> </tr>
+</tbody>
+</table>
+</div>
+
+</div>
+<br><br>
+
+</article>
+<br><br><br>
+
+<br><br><br>
+<div id="anne_naeyong">
+<article id="korea">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">대한민국 (Republic of Korea ROK)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_korea.png" width="150px" height="100px">국기: 태극기
+<br>국가: 애국가 <details><summary>국가 재생</summary><audio src="anthem_korea.mp3" controls></audio></details>
+<br><b>&lt;국가가사-우리말&gt;</b>
+<br>동해 물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세
+<br>무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+<br>
+<br><b>&lt;국기에 대한 이야기&gt;</b>
+<br>태극기는 흰 바탕의 기 위에 짙은 적색과 남색의 태극 문양을 가운데에 두고
+검은색의 건·곤·감·리 4괘가 네 귀에 둘러싸고 있다. 태극기의 최초 도안자는 고종이다.
+태극기는 1882년 고종이 조선의 왕을 상징하는 어기(御旗)인 '태극 팔괘도'를 일부 변형하여 직접 만들었고,
+1882년 5월 22일 조미 수호 통상 조약과 9월 박영효 등 일본 수신사 일행에 의해 사용되었다.
+태극기는 조선, 대한제국, 대한민국 임시 정부의 공식 국기로 사용되었고,
+1948년 8월 15일 대한민국 정부 수립 이후에도 계속 정식 국기로 사용되고 있다.
+</p>
+</details>
+</article>
+
+<br>
+<article id="usa">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">미국 (United States of America USA)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_usa.png" width="150px" height="100px">국기: 성조기
+<br>국가: 성조기(별이 빛나는 깃발) <details><summary>국가 재생</summary><audio src="anthem_usa.mp3" controls></audio></details>
+<br><b>&lt;국가가사&gt;</b>
+<br>Oh, say can you see, By the dawn's early night?
+<br>Oh, say can you see, By the dawn's early night?
+<br>
+<br><b>&lt;국가가사-우리말&gt;</b>
+<br>오 그대는 보이는가, 새벽녘 너머로?
+<br>Oh, say can you see, By the dawn's early night?
+<br>
+<br><b>&lt;국기에 대한 이야기&gt;</b>
+<br>태극기는 흰 바탕의 기 위에 짙은 적색과 남색의 태극 문양을 가운데에 두고
+검은색의 건·곤·감·리 4괘가 네 귀에 둘러싸고 있다. 태극기의 최초 도안자는 고종이다.
+태극기는 1882년 고종이 조선의 왕을 상징하는 어기(御旗)인 '태극 팔괘도'를 일부 변형하여 직접 만들었고,
+1882년 5월 22일 조미 수호 통상 조약과 9월 박영효 등 일본 수신사 일행에 의해 사용되었다.
+태극기는 조선, 대한제국, 대한민국 임시 정부의 공식 국기로 사용되었고,
+1948년 8월 15일 대한민국 정부 수립 이후에도 계속 정식 국기로 사용되고 있다.
+</p>
+</details>
+</article>
+
+<br>
+<article id="china">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">중화인민공화국 (中华人民共和国 People's Republic of China)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_china.png" width="150px" height="100px">국기: 오성홍기
+<br>국가: 의용군 행진곡 <details><summary>국가 재생</summary><audio src="anthem_china.mp3" controls></audio></details>
+<br><b>&lt;국가가사&gt;</b>
+<br>起来！不愿做奴隶的人们！
+<br>Oh, say can you see, By the dawn's early night?
+<br>
+<br><b>&lt;국가가사-우리말&gt;</b>
+<br>일어나라, 노예가 되길 거부하는 자들이여!
+<br>Oh, say can you see, By the dawn's early night?
+<br>
+<br><b>&lt;국기에 대한 이야기&gt;</b>
+<br>태극기는 흰 바탕의 기 위에 짙은 적색과 남색의 태극 문양을 가운데에 두고
+검은색의 건·곤·감·리 4괘가 네 귀에 둘러싸고 있다. 태극기의 최초 도안자는 고종이다.
+태극기는 1882년 고종이 조선의 왕을 상징하는 어기(御旗)인 '태극 팔괘도'를 일부 변형하여 직접 만들었고,
+1882년 5월 22일 조미 수호 통상 조약과 9월 박영효 등 일본 수신사 일행에 의해 사용되었다.
+태극기는 조선, 대한제국, 대한민국 임시 정부의 공식 국기로 사용되었고,
+1948년 8월 15일 대한민국 정부 수립 이후에도 계속 정식 국기로 사용되고 있다.
+</p>
+</details>
+</article>
+
+<br>
+<article id="japan">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">일본 (日本 Japan)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_japan.png" width="150px" height="100px">국기: 오성홍기
+<br>국가: 의용군 행진곡 <details><summary>국가 재생</summary><audio src="anthem_japan.mp3" controls></audio></details>
+<br><b>&lt;국가가사&gt;</b>
+<br>君が代は
+<br>Oh, say can you see, By the dawn's early night?
+<br>
+<br><b>&lt;국가가사-우리말&gt;</b>
+<br>군주의 치세는
+<br>Oh, say can you see, By the dawn's early night?
+<br>
+<br><b>&lt;국기에 대한 이야기&gt;</b>
+<br>태극기는 흰 바탕의 기 위에 짙은 적색과 남색의 태극 문양을 가운데에 두고
+검은색의 건·곤·감·리 4괘가 네 귀에 둘러싸고 있다. 태극기의 최초 도안자는 고종이다.
+태극기는 1882년 고종이 조선의 왕을 상징하는 어기(御旗)인 '태극 팔괘도'를 일부 변형하여 직접 만들었고,
+1882년 5월 22일 조미 수호 통상 조약과 9월 박영효 등 일본 수신사 일행에 의해 사용되었다.
+태극기는 조선, 대한제국, 대한민국 임시 정부의 공식 국기로 사용되었고,
+1948년 8월 15일 대한민국 정부 수립 이후에도 계속 정식 국기로 사용되고 있다.
+</p>
+</details>
+</article>
+<br>
+</div>
+</div>
+
+<article>
+<div id="b_false_popup">
+<a id="closebtn" href="javascript:document.getElementById('popup').setAttribute('id', 'b_false_popup')">X</a>
+<h1>상담</h1> 
+<p>
+<iframe frameborder="0" name="chat" width="60%" height="350px" src=""></iframe>
+<br><a href="https://tawk.to/chat/5cefd050267b2e5785302999/default" target="chat">채팅시작</a>
+</p>
+</div>
+</article>
+</section>
+
+<aside id="sidemenu">
+<h3>리모콘</h3>
+<ul>
+<li><a href="login.html">로그인</a></li>
+<li><a href="javascript:document.getElementById('b_false_popup').setAttribute('id', 'popup')">상담</a></li>
+<li><a href="javascript:document.getElementById('clock').setAttribute('id', 'true_clock')">시계</a></li>
+<li><a href="sitemap.html#recommand">추천 사이트</a></li>
+<li><a href="#header">맨위로</a></li>
+<li><a href="#outro">맨아래로</a></li>
+<li><a href="javascript:document.getElementById('sidemenu').setAttribute('style', 'display:inline-block; position: absolute; bottom: 0%; right: 0%; height: 0px; width: 0px; font-size: 0%; box-shadow: 0px 0px 0px gray; background: rgba( 255, 255, 255, 0);')">닫기</a></li>
+</ul>
+</aside>
+
+<footer id="outro">
+대한민국 대전광역시 동구 자양동 우송대학교<br>
+IT융합학부 스마트IT보안전공 201910738 이용위<br>
+<br>
+Copyright(c) 2019 Travel Our World All Rights Reserve<br>
+</footer>
+
+<Script>
+// 시계
+var clockTarget = document.getElementById("clock");
+function clock()
+{
+    var date = new Date();
+    var month = date.getMonth();
+    var clockDate = date.getDate(); 
+    var day = date.getDay();
+    var week = ['일', '월', '화', '수', '목', '금', '토'];
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    clockTarget .innerText = `${month+1}월 ${clockDate}일 ${week[day]}요일` +  ` ${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes }`  : minutes }:${seconds < 10 ? `0${seconds }`  : seconds }`;
+}
+
+function init()
+{
+clock();
+setInterval(clock, 1000);
+}
+
+init();
+
+// 탭
+$(function() {
+	$('ul.tab li').click(function() {
+	var activeTab = $(this).attr('data-tab');
+	$('ul.tab li').removeClass('current');
+	$('.tabcontent').removeClass('current');
+	$(this).addClass('current');
+	$('#' + activeTab).addClass('current');
+	})
+});
+</Script>
+</Body>
+</HTML>

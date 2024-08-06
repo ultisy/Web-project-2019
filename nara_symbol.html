@@ -1,0 +1,702 @@
+<!Doctype HTML>
+<HTML>
+<Head><meta charset="utf-8"> <title>Travel Our World</title>
+<Style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap');
+body {margin: 0px 0px; background: white; font-family: 'Noto Sans KR', sans-serif;}
+header {background: white;}
+#logo {text-align: center; padding: 3% 5%; }
+aside {display:inline-block; font-size: 100%; position: fixed; bottom: 10%; right: 10%; box-shadow: 8px 8px 20px gray;}
+#menubar {margin: 0px 0px; width: 100%; display:inline-block; background: #f8e43e; text-align: center}
+#menubar ul li {display:inline-block; list-style-type:none; padding: 0% 4%; font-size: 0%;}
+#menubar ul li:hover {font-size: 100%;  padding: 0% 4%;}
+#menubar ul li a {color: white; text-decoration: none;}
+
+#anne_naeyong {padding: 5% 13%;}
+#saekin {height: 350px; padding: 4% 15% 4% 15%; background-image: url(background2.jpg); background-position: center; background-repeat: no-repeat; background-size:cover; text-align: center;}
+#saekin table {display:inline-block; text-align: center;  border: 1px solid #c0c0c0; border-collapse: collapse; box-shadow: 0px 14px 20px gray;}
+#saekin table th {background-color: ghostwhite; text-align: center; padding: 10px; width: 200px; height: 30px; border-right: 1px solid #c0c0c0;}
+#saekin table td {background-color: white; text-align: left; padding: 15px; width: 200px; height: 20px; border-right: 1px solid #c0c0c0;}
+#saekin table td a {color: black; text-decoration: none;}
+#saekin table td a:hover {color: #ffb222; text-decoration: underline;}
+
+#saekin table td img {float:left; padding-right:10px; width: 30px; height: 20px;}
+#saekin table td:hover {background-color: #fff38a;}
+
+#sidemenu h3 {text-align: center}
+#sidemenu {background: ghostwhite; padding: 1% 1%;}
+#sidemenu ul {margin: 0; padding: 0;}
+#sidemenu ul li {list-style-type:none; padding: 0px 15px;}
+#sidemenu ul li a {color: black; text-decoration: none;}
+#sidemenu ul li a:hover {font-weight: bold; text-shadow: 0px 0px 0px black;}
+
+#popup {animation: fadein 0.15s; transition: transform 0.15s; font-size: 100%; text-align: center; margin: 3% 5%; padding: 2%; background-color: rgba(255, 255, 255, 0.877); display: block; position: fixed; top: 5%; bottom: 5%; right: 5%; left: 5%; border-radius: 20px; box-shadow: 0px 0px 10px gray;}
+#b_false_popup {height: 0%; width: 0%; font-size:0%; text-align: center; margin: 0% 0%; padding: 0%; background-color: rgba(255, 255, 255, 0); display: block; position: fixed; top: 0px; bottom: 0px; right: 0px; left: 0px; border-radius: 0px; box-shadow: 0px 0px 0px gray;}
+#b_false_popup iframe {width: 0px; height: 0px;}
+
+#popup:hover {transition-property: background-color; background-color: rgb(255, 255, 255);}
+#popup #closebtn {font-size: 35px; font-weight: bold; color: gray; text-decoration: none; text-shadow: 0px 0px 0px black; transition: transform 0.1s;}
+#popup #closebtn:hover {transition-property: text-shadow; text-shadow: 0px 3px 7px gray;}
+
+footer {background-color: #292e3b; color: white; text-align: center; padding: 5% 4%;}
+
+#true_clock {display:inline-block; position: fixed; bottom: 10%; left: 5%; animation: fadein 0.2s; text-align:center; text-shadow: 0px 2px 7px rgb(58, 58, 58); font-size: 25px; font-weight: bold; color: rgb(250, 250, 250);}
+#clock {display:inline-block; position: fixed; bottom: 10%; left: 10%; text-shadow: 0px 0px 0px gray; font-size: 0px; color: rgba(255, 255, 255, 0);}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+</Style>
+</Head>
+<Body>
+<Script type="text/javascript">
+// MS IE 접속차단
+window.onload = function()
+{
+var browse = navigator.userAgent.toLowerCase(); 
+if( (navigator.appName == 'Netscape' && browse.indexOf('trident') != -1) || (browse.indexOf("msie") != -1))
+ {
+ alert("죄송합니다. 우리 웹사이트는 MS IE에서 서비스를 제공하지 않습니다. 다른 웹 브라우저로 접속하시길 바랍니다.");
+ window.location.href = "error.html";
+ }
+};
+</Script>
+
+<h1 id="clock"></h1>
+<a id="clock" href="javascript:document.getElementById('true_clock').setAttribute('id', 'clock')">두번 눌러 닫기</a>
+
+<header id="header">
+<div id="logo"><img src="logopng.png" width="35%" height="50%"></div>
+</header>
+
+<nav id="menubar">
+<ul>
+<li><a href="index.html"><img src="home.png" width="27px" height="27px"><br>홈</a></li>
+<li>&nbsp;</li>
+<li>&nbsp;</li>
+<li><a href="nara_symbol.html"><img src="flag.png" width="27px" height="27px"><br>상징과 국가</a></li>
+<li><a href="nara_theme.html"><img src="airplane.png" width="27px" height="27px"><br>테마 및 여행</a></li>
+<li><a href="travel_helper.html"><img src="double.png" width="27px" height="27px"><br>여행 도우미</a></li>
+<li>&nbsp;</li>
+<li>&nbsp;</li>
+<li><a href="sitemap.html"><img src="sitemap.png" width="27px" height="27px"><br>사이트맵</a></li>
+</ul>
+</nav>
+
+<section>
+<div id="symbol_naeyong">
+<article id="saekin">
+<div style="text-align: left;">
+<div style="font-weight: 700; font-size: 45px; color: black;">상징과 국가</div>
+<div style="font-weight: 400; font-size: 20px; color: gray;">각 나라의 상징과 국가에는 그 나라의 얼이 담겨있습니다. 흥미로운 이야기와 함께 상징과 국가를 들어보세요.</div><br>
+</div>
+<br>
+<table>
+ <thead>  <tr> <th>아시아</th> <th>동남아시아</th> <th>유럽</th> <th>기타</th> </tr>  </thead>
+ <tbody>  <tr> <td><a href="#korea"><img src="flag_korea.png">대한민국</a></td> <td><a href="#vietnam"><img src="flag_vietnam.png">베트남</a></td> <td><a href="#italy"><img src="flag_italy.png">이탈리아</a></td> <td><a href="#usa"><img src="flag_usa.png">미국</a></td> </tr>  
+          <tr> <td><a href="#japan"><img src="flag_japan.png">일본</a></td> <td><a href="#malaysia"><img src="flag_malaysia.png">말레이시아</a></td> <td><a href="#germany"><img src="flag_germany.png">독일</a></td> <td><a href="#russia"><img src="flag_russia.png">러시아</a></td> </tr>  
+          <tr> <td><a href="#china"><img src="flag_china.png">중국</a></td> <td><a href="#singapore"><img src="flag_singapore.png">싱가포르</a></td> <td><a href="#spain"><img src="flag_spain.png">스페인</a></td> <td> </td> </tr>  
+          <tr> <td><a href="#taiwan"><img src="flag_taiwan.png">대만</a></td> <td><a href="#tai"><img src="flag_tai.png">태국</a></td> <td><a href="#canada"><img src="flag_canada.png">캐나다</a></td> <td> </td> </tr>  
+          <tr> <td> </td> <td><a href="#philippines"><img src="flag_philippines.png">필리핀</a></td> <td><a href="#france"><img src="flag_france.png">프랑스</a></td> <td> </td> </tr> 
+          <tr> <td> </td> <td></td> <td><a href="#uk"><img src="flag_uk.png">영국</a></td><td></td> </tr> 
+        </tbody>
+</table>
+</article>
+<br><br><br>
+
+<br><br><br>
+<div id="anne_naeyong">
+<article id="korea">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">대한민국 (Republic of Korea ROK)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_korea.png" width="150px" height="100px">국기: 태극기
+<br>국가: 애국가 <details><summary>국가 재생</summary><audio src="anthem_korea.mp3" controls></audio></details>
+<br><b>&lt;국가가사-우리말&gt;</b>
+<br>동해 물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세
+<br>무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+<br>
+<br><b>&lt;국기에 대한 이야기&gt;</b>
+<br>태극기는 흰 바탕의 기 위에 짙은 적색과 남색의 태극 문양을 가운데에 두고
+검은색의 건·곤·감·리 4괘가 네 귀에 둘러싸고 있다. 태극기의 최초 도안자는 고종이다.
+태극기는 1882년 고종이 조선의 왕을 상징하는 어기(御旗)인 '태극 팔괘도'를 일부 변형하여 직접 만들었고,
+1882년 5월 22일 조미 수호 통상 조약과 9월 박영효 등 일본 수신사 일행에 의해 사용되었다.
+태극기는 조선, 대한제국, 대한민국 임시 정부의 공식 국기로 사용되었고,
+1948년 8월 15일 대한민국 정부 수립 이후에도 계속 정식 국기로 사용되고 있다.
+</p>
+</details>
+</article>
+
+<br>
+<article id="taiwan">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">대만 (臺灣,中華民國 - Tawian, Republic of China)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_taiwan.png" width="150px" height="100px">국기: 청천백일만지홍기
+<br>국가: 중화민국국가(中華民國國歌)<details><summary>국가 재생</summary><audio src="anthem_taiwan.mp3" controls></audio></details>
+<br><b>&lt;국가가사&gt;</b>
+<br>三民主義, 吾黨所宗,
+<br>以建民國, 以進大同.
+<br>咨爾多士, 爲民前鋒,
+<br>夙夜匪懈, 主義是從.
+<br>矢勤矢勇, 必信必忠,
+<br>一心一德, 貫徹始終.
+<br>
+<br><b>&lt;국가가사-우리말&gt;</b>
+<br>삼민주의는 우리들이 따를 길
+<br>이로써 민국을 세우고, 나아가 대동을 이룩하세.
+<br>아, 그대들이여, 민족을 위해 선봉에 서라
+<br>밤낮으로 게으르지 말고, (삼민)주의를 따르라.
+<br>맹세코 근면 용감하고, 반드시 정직하고 충실하라
+<br>한 마음 한 뜻으로, 처음부터 끝까지 관철하라.
+<br>
+</p>
+</details>
+</article>
+
+<br>
+<article id="germany">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">독일 (Bundesrepublik Deutschland - Germany)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_germany.png" width="150px" height="100px">국기: 독일국기
+<br>국가: 독일의 노래(Deutschlandlied) <details><summary>국가 재생</summary><audio src="anthem_germany.mp3" controls></audio></details>
+<br><b>&lt;국가가사&gt;</b>
+<br>Einigkeit und Recht und Freiheit
+<br>Für das Deutsche Vaterland!
+<br>Danach lasst uns alle streben
+<br>Brüderlich mit Herz und Hand!
+<br>Einigkeit und Recht und Freiheit
+<br>Sind des Glückes Unterpfand;
+<br>Blüh' im Glanze dieses Glückes,
+<br>Blühe, deutsches Vaterland!
+<br>
+<br><b>&lt;국가가사-우리말&gt;</b>
+<br>통일과 정의와 자유를
+<br>조국 독일을 위하여!
+<br>이를 위하여 우리 모두 형제처럼
+<br>마음과 손을 모아 노력하자!
+<br>통일과 정의와 자유는
+<br>행복의 증표가 될지니,
+<br>이 환희의 광채 속에서 피어라
+<br>피어나라, 조국 독일이여!
+<br>
+</details>
+</article>
+
+<br>
+<article id="russia">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">러시아 (Российская Федерация - Russia)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_russia.png" width="150px" height="100px">국기: 러시아 국기
+<br>국가: 러시아 연방 찬가(Гимн Российской Федерации) <details><summary>국가 재생</summary><audio src="anthem_russia.mp3" controls></audio></details>
+<br><b>&lt;국가가사&gt;</b>
+<br>Россия — священная наша держава,
+<br>Россия — любимая наша страна.
+<br>Могучая воля, великая слава —
+<br>Твоё достоянье на все времена!
+<br>Славься, Отечество наше свободное,
+<br>Братских народов союз вековой,
+<br>Предками данная мудрость народная!
+<br>Славься, страна! Мы гордимся тобой!
+<br>
+<br><b>&lt;국가가사-우리말&gt;</b>
+<br>러시아, 우리의 신성한 나라여,
+<br>러시아, 우리가 사랑하는 조국이여!
+<br>강인한 의지와 위대한 영광이
+<br>너와 언제나 함께하리라!
+<br>찬양하라, 우리의 자유로운 조국이여,
+<br>오랜 형제 민족들의 연합이여,
+<br>선조로부터 물려받은 민중의 지혜여!
+<br>찬양받으라, 조국이여! 우리는 그대가 자랑스럽다!
+<br>
+</p>
+</details>
+</article>
+
+<br>
+<article id="usa">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">미국 (United States of America USA)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_usa.png" width="150px" height="100px">국기: 성조기
+<br>국가: 성조기(별이 빛나는 깃발) <details><summary>국가 재생</summary><audio src="anthem_usa.mp3" controls></audio></details>
+<br><b>&lt;국가가사&gt;</b>
+<br>O say, can you see, by the dawn’s early light,
+<br>What so proudly we hailed at the twilight’s last gleaming,
+<br>Whose broad stripes and bright stars, through the perilous fight,
+<br>O’er the ramparts we watched, were so gallantly streaming?
+<br>And the rockets’ red glare, the bombs bursting in air,
+<br>Gave proof through the night that our flag was still there;
+<br>O say, does that star-spangled banner yet wave
+<br>O’er the land of the free and the home of the brave?
+<br>
+<br><b>&lt;국가가사-우리말&gt;</b>
+<br>오, 그대는 보이는가, 이 새벽의 여명 속, 
+<br>황혼의 미광 속에서 우리가 그토록 자랑스럽게 환호하며 맞았던 
+<br>넓은 줄무늬와 빛나는 별들이 이 치열한 전투 가운데 
+<br>우리의 성벽 위에서 당당히 나부끼고 있는 것이? 
+<br>로켓의 붉은 섬광과 창공에서 작렬하는 폭탄이 
+<br>밤새 우리의 깃발이 그곳을 지켰음을 증명할지니
+<br>오, 말해주오, 성조기는 여전히 휘날리고 있는가? 
+<br>자유인의 땅 그리고 용감한 이들의 고향 위로!
+<br>
+</p>
+</details>
+</article>
+
+<br>
+<article id="malaysia">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">말레이시아 (Malaysia)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_malaysia.png" width="150px" height="100px">국기: 말레이시아 국기
+<br>국가: 나의 조국(Negaraku) <details><summary>국가 재생</summary><audio src="anthem_malaysia.mp3" controls></audio></details>
+<br><b>&lt;국가가사&gt;</b>
+<br>Negaraku, 
+<br>Tanah tumpahnya darahku, 
+<br>Rakyat hidup 
+<br>bersatu dan maju, 
+<br>
+<br>Rahmat bahagia 
+<br>Tuhan kurniakan, 
+<br>Raja kita 
+<br>selamat bertakhta. 
+<br>
+<br>Rahmat bahagia 
+<br>Tuhan kurniakan, 
+<br>Raja kita 
+<br>selamat bertakhta.
+<br>
+</p>
+</details>
+</article>
+
+<br>
+<article id="vietnam">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">베트남 (Việt Nam - Vietnam)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_vietnam.png" width="150px" height="100px">국기: 황성주기
+<br>국가: 진군가(Tiến Quân Ca) <details><summary>국가 재생</summary><audio src="anthem_vietnam.mp3" controls></audio></details>
+<br><b>&lt;국가가사&gt;</b>
+<br>Đoàn quân Việt Nam đi
+<br>Chung lòng cứu quốc
+<br>Bước chân dồn vang trên đường gập ghềnh xa
+<br>Cờ in máu chiến thắng mang hồn nước,
+<br>Súng ngoài xa chen khúc quân hành ca.
+<br>Đường vinh quang xây xác quân thù,
+<br>Thắng gian lao cùng nhau lập chiến khu.
+<br>Vì nhân dân chiến đấu không ngừng,
+<br>Tiến mau ra sa trường,
+<br>Tiến lên, cùng tiến lên.
+<br>Nước non Việt Nam ta vững bền.
+<br>
+<br><b>&lt;국가가사-우리말&gt;</b>
+<br>베트남 군대여 전진하자.
+<br>조국을 지키러 하나되어 나아가자.
+<br>우리 바쁜 걸음 소리가 길고 고된 길 위에 울려 퍼진다.
+<br>핏빛 승리로 빨갛게 물든 우리 깃발에 우리나라의 정신이 담긴다.
+<br>멀리서 퍼지는 총소리가 우리의 행진곡에 뒤섞인다.
+<br>영광으로 가는 길은 적의 몸뚱이를 넘어간다.
+<br>모든 고난을 극복하고, 우리 함께 저항 기지를 만든다.
+<br>인민을 위하여 우리는 끊임없이 분투한다,
+<br>전장으로 달려가면서!
+<br>앞으로! 모두 앞으로!
+<br>우리의 베트남은 강하고 영원하다.
+<br>
+</p>
+</details>
+</article>
+
+<br>
+<article id="singapore">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">싱가포르 (Republik Singapura - Singapore)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_singapore.png" width="150px" height="100px">국기: 싱가포르 국기
+<br>국가: 전진하는 싱가포르(Majulah Singapura) <details><summary>국가 재생</summary><audio src="anthem_singapore.mp3" controls></audio></details>
+<br><b>&lt;국가가사&gt;</b>
+<br>Mari kita rakyat Singapura
+<br>Sama-sama menuju bahagia
+<br>Cita-cita kita yang mulia
+<br>Berjaya Singapura
+<br>Marilah kita bersatu
+<br>Dengan semangat yang baru
+<br>Semua kita berseru
+<br>Majulah Singapura
+<br>
+</p>
+</details>
+</article>
+
+<br>
+<article id="spain">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">스페인 (Reino de España - Spain)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_spain.png" width="150px" height="100px">국기: 적심기 (Rojigualda)
+<br>국가: 왕의 행진(Marcha Real) <details><summary>국가 재생</summary><audio src="anthem_spain.mp3" controls></audio></details>
+<br><b>&lt;국가에 대한 이야기&gt;</b>
+<br>이 곡은 세계에서 가장 오래된 국가 중 하나이다. 이 노래는 1761년 마누엘 데 에스피노사 델로스 몬테로스가 발간한 어느 책에서 처음 발견되었다. 그것은 프로이센의 왕과 영국 국왕 등으로부터 선물로 간주되어 왔다.
+초기의 제목은 '척탄병 행진곡'이었다. 1770년 이 곡은 공식 석상과 같은 곳에서 연주가 되었으며, 왕실에서도 연주가 되었기 때문에 &lt;왕의 행진&gt;이라 하게 되었다. 공화정 때에는 리에고의 노래가 그 지위를 대신했다. 후에 프랑코 정권의 출범으로 "척탄병 행진곡"이라 불리게 되었다. 1975년 기존 제목을 되찾았다.
+<br>(공식적인 가사가 존재하지 않으므로 가사를 수록하지 않았습니다.)
+<br>
+</p>
+</details>
+</article>
+
+<br>
+<article id="uk">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">영국 (United Kingdom of Great Britain and Northern Ireland)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_uk.png" width="150px" height="100px">국기: 유니언 잭(Union Jack)
+<br>국가: 하느님, 여왕(국왕) 폐하를 지켜 주소서(God Save the Queen) <details><summary>국가 재생</summary><audio src="anthem_uk.mp3" controls></audio></details>
+<br><b>&lt;국가가사&gt;</b>
+<br>God save our gracious Queen/King,
+<br>Long live our noble Queen/King,
+<br>God save the Queen/King!
+<br>Send her/him victorious,
+<br>Happy and glorious,
+<br>Long to reign over us;
+<br>God save the Queen/King!
+<br>
+<br><b>&lt;국가가사-우리말&gt;</b>
+<br>하느님, 자비로우신 우리의 여왕을 지켜주시고
+<br>고귀한 우리의 여왕께서 만수무강하게 하소서
+<br>하느님, 우리의 여왕을 지켜주소서!
+<br>그녀에게 승리와
+<br>행복과 영광을 주시고
+<br>오랫동안 우리를 다스리게 하소서
+<br>하느님, 여왕을 지켜주소서!
+<br>
+</p>
+</details>
+</article>
+
+<br>
+<article id="japan">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">일본 (日本 - Japan)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_japan.png" width="150px" height="100px">국기: 일장기(日の丸)
+<br>국가: 기미가요(임금의 치세, 君が代) <details><summary>국가 재생</summary><audio src="anthem_japan.mp3" controls></audio></details>
+<br><b>&lt;국가가사&gt;</b>
+<br>君が代は
+<Br>君が代は
+<Br>千代に八千代に
+<Br>細石の
+<Br>巌となりて
+<Br>苔の生すまで
+<br>
+<br><b>&lt;국가가사-우리말&gt;</b>
+<br>임금의 치세는
+<br>천 대에 팔천 대에
+<br>작은 조약돌이
+<br>큰 바위가 되어서
+<br>이끼가 낄 때까지
+<br>
+<br><b>&lt;국가에 대한 이야기&gt;</b>
+<br>대한민국은 물론, 아시아의 일본 제국의 지배나 공격을 받았던 중화인민공화국, 중화민국, 조선민주주의인민공화국등에서는 당시 일본 제국의 국가이자, 일제 식민 지배를 당했던 국가의 국가였고, 현재도 일본의 국가로 쓰이는 기미가요에 대해 인식이 좋지 않다.
+</p>
+</details>
+</article>
+
+<br>
+<article id="italy">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">이탈리아 (Italiana - Italy)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_italy.png" width="150px" height="100px">국기: 이탈리아 국기(Il Tricolore)
+<br>국가: 이탈리아인의 노래(Il Canto degli Italiani) <details><summary>국가 재생</summary><audio src="anthem_italy.mp3" controls></audio></details>
+<br><b>&lt;국가가사&gt;</b>
+<br>Fratelli d'Italia,
+<br>l'Italia s'è desta,
+<br>dell'elmo di Scipio
+<br>s'è cinta la testa.
+<br>Dov'è la Vittoria?
+<br>Le porga la chioma,
+<br>che schiava di Roma
+<br>Iddio la creò.
+<br>
+<br>Stringiamoci a coorte,
+<br>siam pronti alla morte.
+<br>Siam pronti alla morte,
+<br>l'Italia chiamò.
+<br>
+<br><b>&lt;국가가사-우리말&gt;</b>
+<br>이탈리아의 형제들이여,
+<br>이탈리아는 깨어났다네.
+<br>스키피오의 투구를
+<br>그녀의 머리에 둘러썼다네.
+<br>승리의 여신, 어디에 있는가?
+<br>그대의 머리를 숙이라!
+<br>신께서 승리를
+<br>로마의 종으로 삼으셨으니!
+<br>
+<br>결사로 뭉치라,
+<br>죽음을 각오하라,
+<br>죽음을 각오하니,
+<br>이탈리아가 부르는도다.
+<br>결사로 뭉치라,
+<br>죽음을 각오하라,
+<br>죽음을 각오하니,
+<br>이탈리아가 부르는도다! 가자!
+<br>
+<br><b>&lt;국가에 대한 이야기&gt;</b>
+</p>
+</details>
+</article>
+
+<br>
+<article id="china">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">중국 (中华人民共和国 - People's Republic of China)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_china.png" width="150px" height="100px">국기: 오성홍기
+<br>국가: 의용군 행진곡(义勇军进行曲) <details><summary>국가 재생</summary><audio src="anthem_china.mp3" controls></audio></details>
+<br><b>&lt;국가가사&gt;</b>
+<br>起来！不愿做奴隶的人们！
+<br>把我们的血肉，筑成我们新的长城！
+<br>中华民族到了最危险的时候，
+<br>每个人被迫着发出最后的吼声。
+<br>起来！起来！起来！
+<br>我们万众一心，
+<br>冒着敌人的炮火，前进！
+<br>冒着敌人的炮火，前进！
+<br>前进！前进！进！
+<br>
+<br><b>&lt;국가가사-우리말&gt;</b>
+<br>일어나라! 노예가 되기를 원치 않는 사람들이여!
+<br>우리의 피와 살로 새로운 만리장성을 세우자!
+<br>중화민족에 가장 위험한 시기이 닥쳐올 때,
+<br>억압받는 한 사람마다 마지막 함성이 터져나오리!
+<br>일어나라! 일어나라! 일어나라!
+<br>우리의 마음을 하나로 모아서,
+<br>적의 포화에 맞서, 전진!
+<br>적의 포화에 맞서, 전진!
+<br>전진! 전진! 나아가자!
+<br>
+</p>
+</details>
+</article>
+
+<br>
+<article id="canada">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">캐나다 (Canada)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_canada.png" width="150px" height="100px">국기: 단풍잎기(The Maple Leaf)
+<br>국가: 오 캐나다(O Canada) <details><summary>국가 재생</summary><audio src="anthem_canada.mp3" controls></audio></details>
+<br><b>&lt;국가가사&gt;</b>
+<br>O Canada!
+<br>Our home and native land!
+<br>True patriot love in all thy sons command.
+<br>With glowing hearts we see thee rise,
+<br>The True North strong and free!
+<br>From far and wide, O Canada,
+<br>We stand on guard for thee.
+<br>God keep our land glorious and free!
+<br>O Canada, we stand on guard for thee.
+<br>O Canada, we stand on guard for thee.
+<br>
+<br><b>&lt;국가가사-우리말&gt;</b>
+<br>오 캐나다!
+<br>우리의 집이자 우리가 태어난 땅이여!
+<br>우리들 모두 사령부 안의 진정한 애국심.
+<br>타오르는 가슴으로 조국의 비상을 바라보리.
+<br>진정한 북쪽의 강력함과 자유로움이여!
+<br>저 광활하고 넓은, 오, 캐나다!
+<br>우리는 그대를 수호하러 일어서리라.
+<br>하나님이 우리 땅을 영광스롭고 자유롭게 하시리,
+<br>오 캐나다, 우리는 그대를 수호하러 일어서리라!
+<br>오 캐나다, 우리는 그대를 수호하러 일어서리라!
+<br>
+</p>
+</details>
+</article>
+
+<br>
+<article id="tai">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">태국 (ประเทศไทย - Thailand)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_tai.png" width="150px" height="100px">국기: 태국 국기(ธงไตรรงค์)
+<br>국가: 플렝 찻(เพลงชาติ) <details><summary>국가 재생</summary><audio src="anthem_tai.mp3" controls></audio></details>
+<br><b>&lt;국가가사&gt;</b>
+<br>ประเทศไทยรวมเลือดเนื้อชาติเชื้อไทย
+<br>เป็นประชารัฐ ไผทของไทยทุกส่วน
+<br>อยู่ดำรงคงไว้ได้ทั้งมวล
+<br>ด้วยไทยล้วนหมาย รักสามัคคี
+<br>ไทยนี้รักสงบ แต่ถึงรบไม่ขลาด
+<br>เอกราชจะไม่ให้ใครข่มขี่
+<br>สละเลือดทุกหยาดเป็นชาติพลี
+<br>เถลิงประเทศชาติไทยทวี มีชัย ชโย
+<br>
+</p>
+</details>
+</article>
+
+<br>
+<article id="france">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">프랑스 (France)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_france.png" width="150px" height="100px">국기: 프랑스 국기(La Tricolore)
+<br>국가: 마르세유의 노래(La Marseillaise) <details><summary>국가 재생</summary><audio src="anthem_france.mp3" controls></audio></details>
+<br><b>&lt;국가가사&gt;</b>
+<br>Allons enfants de la Patrie,
+<br>Le jour de gloire est arrivé!
+<br>Contre nous de la tyrannie,
+<br>L'étendard sanglant est levé, (bis)
+<br>Entendez-vous dans les campagnes
+<br>Mugir ces féroces soldats?
+<br>Ils viennent jusque dans vos bras
+<br>Égorger vos fils, vos compagnes!
+<br>
+<br>Aux armes, citoyens
+<br>Formez vos bataillons
+<br>Marchons, marchons!
+<br>Qu'un sang impur
+<br>Abreuve nos sillons!
+<br>
+<br><b>&lt;국가가사-우리말&gt;</b>
+<br>일어나라 조국의 아이들아, 
+<br>영광의 날이 왔도다!
+<br>우리에 대항하여, 압제자의 
+<br>피 묻은 깃발이 일어났도다.
+<br>들리는가 저 들판의 
+<br>흉폭한 병사들의 고함소리가?
+<br>놈들이 우리의 지척까지 와서 
+<br>우리의 아들과 아내의 목을 베려 한다!
+<br>
+<br>무기를 들라, 시민들이여!
+<br>대열을 갖추라!
+<br>전진하라, 전진하라!
+<br>놈들의 더러운 피로
+<br>우리의 밭고랑을 적시도록!
+<br>
+</p>
+</details>
+</article>
+
+<br>
+<article id="philippines">
+<details>
+<summary><span style="text-align: left; font-size: 20px; font-weight: 700;">필리핀(Pilipinas - Philippines)</span></summary>
+<hr style="border-top : 1px solid rgb(119, 119, 119); border-bottom : 1px solid rgb(218, 218, 218)">
+<p>
+<img style="float:left; padding-right:20px;" src="flag_philippines.png" width="150px" height="100px">국기: 필리핀 국기(Pambansang Watawat)
+<br>국가: 선택된 땅(Lupang Hinirang) <details><summary>국가 재생</summary><audio src="anthem_philippines.mp3" controls></audio></details>
+<br><b>&lt;국가가사&gt;</b>
+<br>Bayang magiliw
+<br>Perlas ng Silanganan,
+<br>Alab ng puso,
+<br>Sa dibdib mo'y buhay.
+<br>Lupang Hinirang,
+<br>Duyan ka ng magiting,
+<br>Sa manlulupig,
+<br>Di ka pasisiil.
+<br>Sa dagat at bundok,
+<br>Sa simoy at sa langit mong bughaw,
+<br>May dilag ang tula
+<br>At awit sa paglayang minamahal.
+<br>Ang kislap ng watawat mo'y
+<br>Tagumpay na nagniningning,
+<br>Ang bituin at araw nya'y
+<br>Kailan pa ma'y di magdidilim.
+<br>Lupa ng araw, ng luwalhati't pagsinta,
+<br>Buhay ay langit sa piling mo;
+<br>Aming ligaya, na pag may mang-aapi
+<br>Ang mamatay nang dahil sa iyo.
+<br>
+</p>
+</details>
+</article>
+
+<br>
+
+</div>
+</div>
+
+<article>
+<div id="b_false_popup">
+<a id="closebtn" href="javascript:document.getElementById('popup').setAttribute('id', 'b_false_popup')">X</a>
+<h1>상담</h1> 
+<p>
+<iframe frameborder="0" name="chat" width="60%" height="350px" src=""></iframe>
+<br><a href="https://tawk.to/chat/5cefd050267b2e5785302999/default" target="chat">채팅시작</a>
+</p>
+</div>
+</article>
+</section>
+
+<aside id="sidemenu">
+<h3>리모콘</h3>
+<ul>
+<li><a href="login.html">로그인</a></li>
+<li><a href="javascript:document.getElementById('b_false_popup').setAttribute('id', 'popup')">상담</a></li>
+<li><a href="javascript:document.getElementById('clock').setAttribute('id', 'true_clock')">시계</a></li>
+<li><a href="sitemap.html#recommend">추천 사이트</a></li>
+<li><a href="#header">맨위로</a></li>
+<li><a href="#outro">맨아래로</a></li>
+<li><a href="javascript:document.getElementById('sidemenu').setAttribute('style', 'display:inline-block; position: absolute; bottom: 0%; right: 0%; height: 0px; width: 0px; font-size: 0%; box-shadow: 0px 0px 0px gray; background: rgba( 255, 255, 255, 0);')">닫기</a></li>
+</ul>
+</aside>
+
+<footer id="outro">
+대한민국 대전광역시 동구 자양동 우송대학교<br>
+IT융합학부 스마트IT보안전공 201910738 이용위<br>
+<br>
+Copyright(c) 2019 Travel Our World All Rights Reserve<br>
+</footer>
+
+<Script>
+// 시계
+var clockTarget = document.getElementById("clock");
+function clock()
+{
+    var date = new Date();
+    var month = date.getMonth();
+    var clockDate = date.getDate(); 
+    var day = date.getDay();
+    var week = ['일', '월', '화', '수', '목', '금', '토'];
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    clockTarget .innerText = `${month+1}월 ${clockDate}일 ${week[day]}요일` +  ` ${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes }`  : minutes }:${seconds < 10 ? `0${seconds }`  : seconds }`;
+}
+
+function init()
+{
+clock();
+setInterval(clock, 1000);
+}
+
+init();
+</Script>
+</Body>
+</HTML>

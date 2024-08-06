@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<head> <meta charset="utf-8"><title>CSS 호버 이미지 효과 구현</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap');
+body {margin: 0px 0px; background: white; font-family: 'Noto Sans KR', sans-serif;}
+
+#foodtable {border-spacing:0px; padding: 3% 3%; }
+#foodtable td {width: 250px;  margin: 0px 0px;}
+#foodtable td img {max-width:100%; height: auto;}
+/* #foodtable td img:hover {box-shadow: 0px 5px 8px gray;} */
+
+.imgbox{width: 250px; height: 250px; position: relative; cursor: pointer; overflow: hidden;}
+.imgdiv{width: 100%; height: 100%; position: absolute; background: ghostwhite; z-index:1; -webkit-transition:all .7s ease; transition: all .4s ease; bottom:0px; overflow: hidden;}
+.imgdiv img{width: 100%; height: 100%;}
+.imgbox:hover .imgdiv{bottom: 120px;}
+.imgdescdiv{width: 100%; height: 110px; padding:10px; color: black; background: ghostwhite; position: absolute; bottom:0px;}
+
+
+
+</style>
+</head>
+<body>
+<div class="imgbox"> <div class="imgdiv"><img src="main4.jpg"></div><div class="imgdescdiv">나라별 순위</div> </div>
+
+<table id="foodtable" style="display:inline-block;">
+<tr> <td><a href="nara_theme.html"><div class="imgbox"> <div class="imgdiv"><img src="food1.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> <td><a href="nara_theme.html"><div class="imgbox"> <div class="imgdiv"><img src="food2.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> <td><a href="nara_symbol.html"><div class="imgbox"> <div class="imgdiv"><img src="food3.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> <td><a href="nara_culture.html"><div class="imgbox"> <div class="imgdiv"><img src="food4.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> </tr>
+<tr> <td><a href="nara_theme.html"><div class="imgbox"> <div class="imgdiv"><img src="food5.jpg"></div><div class="imgdescdiv"><br><b>일식</b><br>라멘 먹고싶다 냠냠냠</div> </div></a></td> </tr>
+</table>
+</body>
+</html>
